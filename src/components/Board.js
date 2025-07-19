@@ -27,18 +27,40 @@ const Board = ({ playerX, playerO, scoreX, scoreO, setScoreX, setScoreO }) => {
     return { winner: null, line: [] };
   };
 
+  // useEffect(() => {
+  //   const result = checkWinner(squares);
+  //   if (result.winner) {
+  //     setWinner(result.winner);
+  //     setWinningLine(result.line);
+  //     winSound.play();
+  //     if (result.winner === "X") setScoreX(scoreX + 1);
+  //     else if (result.winner === "O") setScoreO(scoreO + 1);
+  //   } else if (squares.every(Boolean)) {
+  //     drawSound.play();
+  //   }
+  // }, [squares]);
+
   useEffect(() => {
-    const result = checkWinner(squares);
-    if (result.winner) {
-      setWinner(result.winner);
-      setWinningLine(result.line);
-      winSound.play();
-      if (result.winner === "X") setScoreX(scoreX + 1);
-      else if (result.winner === "O") setScoreO(scoreO + 1);
-    } else if (squares.every(Boolean)) {
-      drawSound.play();
+  // Don’t run if there’s already a winner
+  if (winner) return;
+
+  const result = checkWinner(squares);
+  if (result.winner) {
+    setWinner(result.winner);
+    setWinningLine(result.line);
+    winSound.play();
+
+    if (result.winner === "X") {
+      setScoreX(prev => prev + 1);
+    } else if (result.winner === "O") {
+      setScoreO(prev => prev + 1);
     }
-  }, [squares]);
+  } else if (squares.every(Boolean)) {
+    drawSound.play();
+  }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [squares]);
+
 
   const handleClick = (index) => {
     if (squares[index] || winner) return;
