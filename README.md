@@ -7,7 +7,7 @@ A responsive, modern **Tic Tac Toe** game built with **React.js**. It includes *
 
 ## 🖼️ Demo
 
-![Tic Tac Toe Demo Screenshot](./public/Tic_toe.png)  
+![Tic Tac Toe Demo Screenshot](./Tic_toe.png)  
 ---
 
 ## 🚀 Features
@@ -53,7 +53,7 @@ tic-tac-toe/
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/tic-tac-toe-react.git
+git clone https://github.com/Haidermirza7072/Tic-Toe-Game.git
 cd tic-tac-toe-react
 npm install
 npm start
@@ -96,3 +96,5 @@ Styled with themed classes and CSS transitions for a smooth experience.
 
 Built with ❤️ by [Haider Mirza](https://github.com/Haidermirza7072)
 Feel free to fork, use, and enhance!
+
+# Tic-Toe-Game
