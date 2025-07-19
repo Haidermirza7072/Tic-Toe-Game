@@ -7,7 +7,7 @@ A responsive, modern **Tic Tac Toe** game built with **React.js**. It includes *
 
 ## 🖼️ Demo
 
-![Tic Tac Toe Demo Screenshot](./Tic_toe.png)  
+<img src="./public/Tic_toe.png">
 ---
 
 ## 🚀 Features
