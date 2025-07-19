@@ -1,70 +1,98 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🎮 Tic Tac Toe Game (React)
 
-## Available Scripts
+A responsive, modern **Tic Tac Toe** game built with **React.js**. It includes **player name input**, **score tracking**, **persistent score with localStorage**, and a sleek **dark mode toggle** for a stylish experience.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🖼️ Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Tic Tac Toe Demo Screenshot](./public/Tic_toe.png)  
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Features
 
-### `npm test`
+✅ Player name input (for X and O)  
+✅ Dark mode toggle 🌙  
+✅ Win detection with visual highlights  
+✅ Score tracking and localStorage persistence  
+✅ Reset scores button  
+✅ Fully responsive and mobile-friendly  
+✅ Clean and modern UI with animations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React.js**
+- **CSS3** (custom styling, gradients, transitions)
+- **LocalStorage** (for persistent scores and themes)
+- **React Hooks** (`useState`, `useEffect`)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Folder Structure
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+tic-tac-toe/
+│
+├── public/
+├── src/
+│   ├── components/
+│   │   └── Board.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+└── README.md
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+````
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📦 Installation
 
-## Learn More
+```bash
+git clone https://github.com/your-username/tic-tac-toe-react.git
+cd tic-tac-toe-react
+npm install
+npm start
+````
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎮 How to Play
 
-### Code Splitting
+1. Enter names for **Player X** and **Player O**.
+2. Click **Start Game**.
+3. Take turns clicking the grid squares.
+4. First to align 3 symbols (X or O) wins!
+5. Reset scores anytime using the "Reset Scores" button.
+6. Toggle between **Light and Dark** mode using the switch.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🌑 Dark Mode Preview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+// Sample toggle state
+const [isDarkMode, setIsDarkMode] = useState(false);
+```
 
-### Making a Progressive Web App
+Styled with themed classes and CSS transitions for a smooth experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📌 Future Improvements (optional)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Add sound effects 🎵
+* Emoji support for players
+* Two-player online multiplayer (via sockets)
+* Game history (Win/Draw list)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🙌 Author
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ by [Haider Mirza](https://github.com/Haidermirza7072)
+Feel free to fork, use, and enhance!
