@@ -5,6 +5,7 @@ const clickSound = new Audio("/sounds/click.wav");
 const winSound = new Audio("/sounds/win.mp3");
 const drawSound = new Audio("/sounds/Draw.wav");
 
+
 const Board = ({ playerX, playerO, scoreX, scoreO, setScoreX, setScoreO }) => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isXTurn, setIsXTurn] = useState(true);
@@ -13,12 +14,12 @@ const Board = ({ playerX, playerO, scoreX, scoreO, setScoreX, setScoreO }) => {
 
   const checkWinner = (board) => {
     const winPatterns = [
-      [0, 1, 2], [3, 4, 5], [6, 7, 8],
-      [0, 3, 6], [1, 4, 7], [2, 5, 8],
-      [0, 4, 8], [2, 4, 6]
+      [0,1,2], [3,4,5], [6,7,8],
+      [0,3,6], [1,4,7], [2,5,8],
+      [0,4,8], [2,4,6]
     ];
 
-    for (let [a, b, c] of winPatterns) {
+    for (let [a,b,c] of winPatterns) {
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
         return { winner: board[a], line: [a, b, c] };
       }
@@ -26,19 +27,18 @@ const Board = ({ playerX, playerO, scoreX, scoreO, setScoreX, setScoreO }) => {
     return { winner: null, line: [] };
   };
 
- useEffect(() => {
-  const result = checkWinner(squares);
-  if (result.winner) {
-    setWinner(result.winner);
-    setWinningLine(result.line);
-    winSound.play();
-    if (result.winner === "X") setScoreX(prev => prev + 1);
-    else if (result.winner === "O") setScoreO(prev => prev + 1);
-  } else if (squares.every(Boolean)) {
-    drawSound.play();
-  }
-}, [squares]);
-
+  useEffect(() => {
+    const result = checkWinner(squares);
+    if (result.winner) {
+      setWinner(result.winner);
+      setWinningLine(result.line);
+      winSound.play();
+      if (result.winner === "X") setScoreX(scoreX + 1);
+      else if (result.winner === "O") setScoreO(scoreO + 1);
+    } else if (squares.every(Boolean)) {
+      drawSound.play();
+    }
+  }, [squares]);
 
   const handleClick = (index) => {
     if (squares[index] || winner) return;
